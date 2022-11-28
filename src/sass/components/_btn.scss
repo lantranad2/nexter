@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-family: $font-secondary;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &--primary {
+    color: $color-grey-light;
+    background: $color-primary;
+  }
+
+  &--primary:hover {
+    background: darken($color-primary, 10%);
+  }
+
+  @include xs-2 {
+    font-size: 1.6rem;
+  }
+
+  @include xs-3 {
+    font-size: 1.4rem;
+  }
+}

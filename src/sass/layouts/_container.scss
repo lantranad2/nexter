@@ -8,24 +8,6 @@
   padding-left: $gutter;
   padding-right: $gutter;
 
-  // display: grid;
-  // grid-template-columns: minmax($gutter, 1fr) minmax(min-content, 1120px) minmax(
-  //     $gutter,
-  //     1fr
-  //   );
-  // grid-template-columns:
-  //   [full-start] minmax($gutter, 1fr) [center-start] repeat(
-  //     8,
-  //     [col-start] minmax(min-content, 14rem) [col-end]
-  //   )
-  //   [center-end]
-  //   minmax($gutter, 1fr) [full-end];
-
-  // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  // grid-template-columns:
-  //   6rem minmax($gutter, 1fr) repeat(8, minmax(min-content, 14rem))
-  //   minmax($gutter, 1fr);
-
   border: 2px solid #f00;
 
   & > * {
