@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .container {
   width: min(100%, 1200px);
@@ -32,38 +33,18 @@
   }
 }
 
-.sidebar {
-  // grid-column: 1 / -1;
-}
+@include lg {
+  .container {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
 
-.header {
-  // grid-column: 1 / -1;
-}
+    & > * {
+      grid-column: 2 / -1;
+    }
 
-.realtors {
-  // grid-column: 1 / -1;
-}
-
-.features {
-  // grid-column: 2 / -2;
-}
-
-.story__pictures {
-  // grid-column: 1 / -1;
-}
-
-.story__content {
-  // grid-column: 1 / -1;
-}
-
-.houses {
-  // grid-column: 2 / -2;
-}
-
-.gallery {
-  // grid-column: 1 / -1;
-}
-
-.footer {
-  // grid-column: 1 / -1;
+    .sidebar {
+      grid-column: 1;
+      grid-row: 1 / span 8;
+    }
+  }
 }
