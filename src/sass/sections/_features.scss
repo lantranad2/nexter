@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.features {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  // grid-template-columns: minmax(20rem, 40rem);
+  grid-template-columns:
+    minmax($gutter, 1fr)
+    minmax(20rem, 40rem)
+    minmax($gutter, 1fr);
+
+  gap: 5rem 0;
+  align-items: start;
+
+  & > * {
+    border: 2px solid #0f0;
+  }
+
+  @include xs-2 {
+    column-gap: 0;
+  }
+
+  @include md {
+    grid-template-columns:
+      minmax($gutter, 1fr)
+      repeat(2, minmax(20rem, 37rem))
+      minmax($gutter, 1fr);
+    gap: 2rem;
+  }
+
+  @include lg {
+    grid-template-columns:
+      minmax($gutter, 1fr)
+      repeat(3, minmax(20rem, 37rem))
+      minmax($gutter, 1fr);
+  }
+}

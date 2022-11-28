@@ -1,2 +1,69 @@
+@use "../abstracts/variables" as *;
+
 .container {
+  width: min(100%, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  // display: grid;
+  // grid-template-columns: minmax($gutter, 1fr) minmax(min-content, 1120px) minmax(
+  //     $gutter,
+  //     1fr
+  //   );
+  // grid-template-columns:
+  //   [full-start] minmax($gutter, 1fr) [center-start] repeat(
+  //     8,
+  //     [col-start] minmax(min-content, 14rem) [col-end]
+  //   )
+  //   [center-end]
+  //   minmax($gutter, 1fr) [full-end];
+
+  // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  // grid-template-columns:
+  //   6rem minmax($gutter, 1fr) repeat(8, minmax(min-content, 14rem))
+  //   minmax($gutter, 1fr);
+
+  border: 2px solid #f00;
+
+  & > * {
+    border: 2px solid #00f;
+  }
+}
+
+.sidebar {
+  // grid-column: 1 / -1;
+}
+
+.header {
+  // grid-column: 1 / -1;
+}
+
+.realtors {
+  // grid-column: 1 / -1;
+}
+
+.features {
+  // grid-column: 2 / -2;
+}
+
+.story__pictures {
+  // grid-column: 1 / -1;
+}
+
+.story__content {
+  // grid-column: 1 / -1;
+}
+
+.houses {
+  // grid-column: 2 / -2;
+}
+
+.gallery {
+  // grid-column: 1 / -1;
+}
+
+.footer {
+  // grid-column: 1 / -1;
 }

@@ -1,0 +1,86 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.feature {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1rem;
+
+  & > * {
+    border: 1px solid #f00;
+  }
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  &__heading {
+    align-self: center;
+  }
+
+  &__description {
+    grid-column: 2;
+  }
+
+  @include xs-2 {
+    gap: 0.5rem;
+
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  @include xs-3 {
+    &__icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
+  @include xs-4 {
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  @include md {
+    gap: 0.5rem;
+
+    &:nth-child(2n) {
+      grid-column: 3 / span 1;
+    }
+
+    &:nth-child(2n + 1) {
+      grid-column: 2 / span 1;
+    }
+
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  @include lg {
+    &:nth-child(3n) {
+      grid-column: 4 / span 1;
+    }
+
+    &:nth-child(3n + 1) {
+      grid-column: 2 / span 1;
+    }
+
+    &:nth-child(3n + 2) {
+      grid-column: 3 / span 1;
+    }
+
+    &__icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 *,
 *::before,
 *::after {
@@ -11,9 +13,11 @@ html {
 }
 
 body {
+  font-family: $font-secondary;
   font-size: 1.8rem;
   line-height: 1.5;
   box-sizing: border-box;
+  color: $color-grey-dark;
 }
 
 ul {

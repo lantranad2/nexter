@@ -1,0 +1,75 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.heading {
+  line-height: 1.3;
+  font-family: $font-primary;
+
+  &--secondary {
+    font-size: 2.4rem;
+  }
+
+  @include xs-2 {
+    &--secondary {
+      font-size: 2rem;
+    }
+  }
+
+  @include xs-3 {
+    &--secondary {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include xs-4 {
+    &--secondary {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include xs-5 {
+  }
+
+  @include sm {
+  }
+
+  @include md {
+    &--secondary {
+      font-size: 2rem;
+    }
+  }
+
+  @include lg {
+    &--secondary {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include xl {
+    &--secondary {
+      font-size: 2rem;
+    }
+  }
+}
+
+.text {
+  @include xs-2 {
+    font-size: 1.6rem;
+  }
+
+  @include xs-3 {
+    font-size: 1.4rem;
+  }
+
+  @include md {
+    font-size: 1.6rem;
+  }
+
+  @include lg {
+    font-size: 1.4rem;
+  }
+
+  @include xl {
+    font-size: 1.6rem;
+  }
+}
