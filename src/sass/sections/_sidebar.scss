@@ -3,4 +3,25 @@
 
 .sidebar {
   background: $color-primary;
+  display: flex;
+  justify-content: flex-end;
+
+  &__btn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  &__svg {
+    display: block;
+    width: 50px;
+    height: 50px;
+    fill: $color-grey-light;
+  }
+
+  @include lg {
+    justify-content: center;
+    align-items: flex-start;
+  }
 }

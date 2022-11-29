@@ -2,10 +2,6 @@
 @use "../abstracts/mixins" as *;
 
 .story {
-  & > * {
-    border: 2px solid #0f0;
-  }
-
   &__content {
     display: grid;
     gap: 1rem;
