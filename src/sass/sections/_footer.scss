@@ -1,0 +1,116 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  background: $color-secondary;
+
+  &__nav {
+    display: grid;
+    grid-template-columns:
+      minmax($gutter, 1fr)
+      repeat(2, minmax(min-content, 30rem))
+      minmax($gutter, 1fr);
+    gap: 1rem;
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-item:nth-child(2n + 1) {
+    grid-column: 2 / span 1;
+  }
+
+  &__nav-link {
+    color: $color-grey-light;
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem 0.8rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    transition: all 0.15s;
+
+    &:hover {
+      background: #ffffff0d;
+    }
+  }
+
+  &__copyright {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  @include xs-2 {
+    &__nav {
+      grid-template-columns:
+        minmax($gutter, 1fr)
+        minmax(min-content, 22rem)
+        minmax($gutter, 1fr);
+    }
+
+    &__nav-item {
+      grid-column: 2 / span 1;
+    }
+
+    &__nav-link {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include xs-3 {
+    &__nav-link {
+      font-size: 1.2rem;
+    }
+  }
+
+  @include xs-4 {
+    &__nav-link {
+      font-size: 1.1rem;
+    }
+  }
+
+  @include sm {
+    &__nav {
+      grid-template-columns:
+        minmax($gutter, 1fr)
+        repeat(2, minmax(min-content, 26rem))
+        minmax($gutter, 1fr);
+    }
+
+    &__nav-link {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include md {
+    &__nav {
+      grid-template-columns:
+        minmax($gutter, 1fr)
+        repeat(3, minmax(min-content, 25rem))
+        minmax($gutter, 1fr);
+    }
+
+    &__nav-item:nth-child(3n + 1) {
+      grid-column: 2 / span 1;
+    }
+
+    &__nav-item:nth-child(3n + 2) {
+      grid-column: 3 / span 1;
+    }
+
+    &__nav-item:nth-child(3n) {
+      grid-column: 4 / span 1;
+    }
+
+    &__nav-link {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include lg {
+    &__nav-link {
+      font-size: 1.6rem;
+    }
+  }
+}
