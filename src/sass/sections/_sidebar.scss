@@ -18,6 +18,11 @@
     width: 50px;
     height: 50px;
     fill: $color-grey-light;
+    transition: all 0.4s;
+  }
+
+  &__btn:hover &__svg {
+    fill: $color-grey;
   }
 
   @include lg {
